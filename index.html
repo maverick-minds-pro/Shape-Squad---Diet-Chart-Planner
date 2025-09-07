@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Diet Chart Planner</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Diet Chart Planner</h1>
+
+    <div id="planner">
+        <!-- Morning Section -->
+        <div class="section">
+            <h2>Morning</h2>
+            <div class="inputs">
+                <label><input type="checkbox" value="🍌 Banana" class="morning"> 🍌 Banana</label>
+                <label><input type="checkbox" value="🥜 Nuts" class="morning"> 🥜 Nuts</label>
+                <label><input type="checkbox" value="🥛 Milk" class="morning"> 🥛 Milk</label>
+                <label><input type="checkbox" value="🫓 Chapati" class="morning"> 🫓 Chapati</label>
+                <label><input type="checkbox" value="🍚 Rice" class="morning"> 🍚 Rice</label>
+            </div>
+        </div>
+
+        <!-- Lunch Section -->
+        <div class="section">
+            <h2>Lunch</h2>
+            <div class="inputs">
+                <label><input <!-- Button -->
+                    <button onclick="downloadPDF()">Download Diet Chart as PDF</button>
+
+                    <script>
+                        function downloadPDF() {
+                            const element = document.body; // Or a specific div of diet chart
+                            html2pdf().from(element).save("diet-chart.pdf");
+                        }
+                    </script> type="checkbox" value="🍗 Chicken" class="lunch"> 🍗 Chicken
+                </label>
+                <label><input type="checkbox" value="🍚 Rice" class="lunch"> 🍚 Rice</label>
+                <label><input type="checkbox" value="🫓 Chapati" class="lunch"> 🫓 Chapati</label>
+                <label><input type="checkbox" value="🥗 Salad" class="lunch"> 🥗 Salad</label>
+                <label><input type="checkbox" value="🍎 Apple" class="lunch"> 🍎 Apple</label>
+            </div>
+        </div>
+
+        <!-- Evening Section (like Lunch) -->
+        <div class="section">
+            <h2>Evening</h2>
+            <div class="inputs">
+                <label><input type="checkbox" value="🍌 Banana" class="evening"> 🍌 Banana</label>
+                <label><input type="checkbox" value="🥜 Nuts" class="evening"> 🥜 Nuts</label>
+                <label><input type="checkbox" value="🥛 Milk" class="evening"> 🥛 Milk</label>
+                <label><input type="checkbox" value="🍗 Chicken" class="evening"> 🍗 Chicken</label>
+                <label><input type="checkbox" value="🥗 Salad" class="evening"> 🥗 Salad</label>
+            </div>
+        </div>
+
+        <!-- Dinner Section -->
+        <div class="section">
+            <h2>Dinner</h2>
+            <div class="inputs">
+                <label><input type="checkbox" value="🍗 Chicken" class="dinner"> 🍗 Chicken</label>
+                <label><input type="checkbox" value="🫓 Chapati" class="dinner"> 🫓 Chapati</label>
+                <label><input type="checkbox" value="🥗 Salad" class="dinner"> 🥗 Salad</label>
+                <label><input type="checkbox" value="🍎 Apple" class="dinner"> 🍎 Apple</label>
+            </div>
+        </div>
+
+        <!-- Notes Section -->
+        <div class="section">
+            <h2>Notes</h2>
+            <div class="inputs">
+                <label><input type="checkbox" value="💧 Drink Water" class="notes"> 💧 Drink Water</label>
+                <label><input type="checkbox" value="🛌 Sleep Well" class="notes"> 🛌 Sleep Well</label>
+                <label><input type="checkbox" value="⚖️ Balanced Diet" class="notes"> ⚖️ Balanced Diet</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Generate button -->
+    <button onclick="generateChart()">Generate Diet Chart</button>
+
+    <!-- External JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>

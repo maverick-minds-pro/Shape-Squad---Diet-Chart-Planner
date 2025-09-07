@@ -1,0 +1,52 @@
+/* Global Dark Theme */
+body {
+  background: #121212;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+h2 {
+  text-align: center;
+  margin: 20px 0 10px;
+}
+
+/* Section */
+.section {
+  margin-bottom: 20px;
+}
+
+/* Inputs aligned vertically */
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Labels for checkboxes */
+label {
+  font-size: 16px;
+}
+
+/* Button styling */
+button {
+  display: block;
+  margin: 30px auto;
+  padding: 10px 20px;
+  background: #1db954;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+button:hover {
+  background: #17a44b;
+}
+
