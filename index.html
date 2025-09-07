@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Diet Chart Planner</title>
+    <title>Shape Squad | Diet Chart Planner</title>
     <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -14,13 +14,29 @@
     <div id="planner">
         <!-- Morning Section -->
         <div class="section">
-            <h2>Morning</h2>
+            <h2>Morning : Pre-Workout</h2>
             <div class="inputs">
-                <label><input type="checkbox" value="🍌 Banana" class="morning"> 🍌 Banana</label>
-                <label><input type="checkbox" value="🥜 Nuts" class="morning"> 🥜 Nuts</label>
-                <label><input type="checkbox" value="🥛 Milk" class="morning"> 🥛 Milk</label>
-                <label><input type="checkbox" value="🫓 Chapati" class="morning"> 🫓 Chapati</label>
-                <label><input type="checkbox" value="🍚 Rice" class="morning"> 🍚 Rice</label>
+                <label><input type="checkbox" value="🍌 Banana" class="morning-pre"> 🍌 Banana</label>
+                <label><input type="checkbox" value="🥜 Nuts" class="morning-pre"> 🥜 Nuts</label>
+                <label><input type="checkbox" value="🥛 Milk" class="morning-pre"> 🥛 Milk</label>
+                <label><input type="checkbox" value="🫓 Chapati" class="morning-pre"> 🫓 Chapati</label>
+                <label><input type="checkbox" value="🍚 Rice" class="morning-pre"> 🍚 Rice</label>
+            </div>
+            <h2>Morning : Post-Workout</h2>
+            <div class="inputs">
+                <label><input type="checkbox" value="🍌 Banana" class="morning-post"> 🍌 Banana</label>
+                <label><input type="checkbox" value="🥜 Nuts" class="morning-post"> 🥜 Nuts</label>
+                <label><input type="checkbox" value="🥛 Milk" class="morning-post"> 🥛 Milk</label>
+                <label><input type="checkbox" value="🫓 Chapati" class="morning-post"> 🫓 Chapati</label>
+                <label><input type="checkbox" value="🍚 Rice" class="morning-post"> 🍚 Rice</label>
+            </div>
+            <h2>Morning : Breakfast</h2>
+            <div class="inputs">
+                <label><input type="checkbox" value="🍌 Banana" class="morning-break"> 🍌 Banana</label>
+                <label><input type="checkbox" value="🥜 Nuts" class="morning-break"> 🥜 Nuts</label>
+                <label><input type="checkbox" value="🥛 Milk" class="morning-break"> 🥛 Milk</label>
+                <label><input type="checkbox" value="🫓 Chapati" class="morning-break"> 🫓 Chapati</label>
+                <label><input type="checkbox" value="🍚 Rice" class="morning-break"> 🍚 Rice</label>
             </div>
         </div>
 
@@ -28,16 +44,7 @@
         <div class="section">
             <h2>Lunch</h2>
             <div class="inputs">
-                <label><input <!-- Button -->
-                    <button onclick="downloadPDF()">Download Diet Chart as PDF</button>
-
-                    <script>
-                        function downloadPDF() {
-                            const element = document.body; // Or a specific div of diet chart
-                            html2pdf().from(element).save("diet-chart.pdf");
-                        }
-                    </script> type="checkbox" value="🍗 Chicken" class="lunch"> 🍗 Chicken
-                </label>
+                <label><input type="checkbox" value="🍗 Chicken" class="lunch"> 🍗 Chicken</label>
                 <label><input type="checkbox" value="🍚 Rice" class="lunch"> 🍚 Rice</label>
                 <label><input type="checkbox" value="🫓 Chapati" class="lunch"> 🫓 Chapati</label>
                 <label><input type="checkbox" value="🥗 Salad" class="lunch"> 🥗 Salad</label>
@@ -45,15 +52,31 @@
             </div>
         </div>
 
-        <!-- Evening Section (like Lunch) -->
+        <!-- Evening Section -->
         <div class="section">
-            <h2>Evening</h2>
+            <h2>Evening : Pre-Workout</h2>
             <div class="inputs">
-                <label><input type="checkbox" value="🍌 Banana" class="evening"> 🍌 Banana</label>
-                <label><input type="checkbox" value="🥜 Nuts" class="evening"> 🥜 Nuts</label>
-                <label><input type="checkbox" value="🥛 Milk" class="evening"> 🥛 Milk</label>
-                <label><input type="checkbox" value="🍗 Chicken" class="evening"> 🍗 Chicken</label>
-                <label><input type="checkbox" value="🥗 Salad" class="evening"> 🥗 Salad</label>
+                <label><input type="checkbox" value="🍌 Banana" class="evening-pre"> 🍌 Banana</label>
+                <label><input type="checkbox" value="🥜 Nuts" class="evening-pre"> 🥜 Nuts</label>
+                <label><input type="checkbox" value="🥛 Milk" class="evening-pre"> 🥛 Milk</label>
+                <label><input type="checkbox" value="🫓 Chapati" class="evening-pre"> 🫓 Chapati</label>
+                <label><input type="checkbox" value="🍚 Rice" class="evening-pre"> 🍚 Rice</label>
+            </div>
+            <h2>Evening : Post-Workout</h2>
+            <div class="inputs">
+                <label><input type="checkbox" value="🍌 Banana" class="evening-post"> 🍌 Banana</label>
+                <label><input type="checkbox" value="🥜 Nuts" class="evening-post"> 🥜 Nuts</label>
+                <label><input type="checkbox" value="🥛 Milk" class="evening-post"> 🥛 Milk</label>
+                <label><input type="checkbox" value="🫓 Chapati" class="evening-post"> 🫓 Chapati</label>
+                <label><input type="checkbox" value="🍚 Rice" class="evening-post"> 🍚 Rice</label>
+            </div>
+            <h2>Evening : Snacks</h2>
+            <div class="inputs">
+                <label><input type="checkbox" value="🍌 Banana" class="evening-snack"> 🍌 Banana</label>
+                <label><input type="checkbox" value="🥜 Nuts" class="evening-snack"> 🥜 Nuts</label>
+                <label><input type="checkbox" value="🥛 Milk" class="evening-snack"> 🥛 Milk</label>
+                <label><input type="checkbox" value="🫓 Chapati" class="evening-snack"> 🫓 Chapati</label>
+                <label><input type="checkbox" value="🍚 Rice" class="evening-snack"> 🍚 Rice</label>
             </div>
         </div>
 
@@ -68,22 +91,49 @@
             </div>
         </div>
 
-        <!-- Notes Section -->
-        <div class="section">
-            <h2>Notes</h2>
-            <div class="inputs">
-                <label><input type="checkbox" value="💧 Drink Water" class="notes"> 💧 Drink Water</label>
-                <label><input type="checkbox" value="🛌 Sleep Well" class="notes"> 🛌 Sleep Well</label>
-                <label><input type="checkbox" value="⚖️ Balanced Diet" class="notes"> ⚖️ Balanced Diet</label>
+        <section class="notes-card" aria-labelledby="notes-heading">
+            <h2 id="notes-heading" class="notes-title">Notes</h2>
+            <div class="notes-list">
+
+                <!-- Water note with quantity input -->
+                <label class="note-item">
+                    <input type="checkbox" class="notes" value="water">
+                    <span class="note-icon">💧</span>
+                    <span class="note-text">Drink
+                        <input type="number" min="0" step="0.25" placeholder="L" class="water-qty" style="width:50px;">
+                        L of water throughout the day;
+                    </span>
+                </label>
+
+                <!-- Other fixed notes -->
+                <label class="note-item">
+                    <input type="checkbox" class="notes" value="Include salad or greens with meals">
+                    <span class="note-icon">🥗</span>
+                    <span class="note-text">Never skip meal more than 4 hours;</span>
+                </label>
+
+
+                <label class="note-item">
+                    <input type="checkbox" class="notes" value="Aim for 7–8 hours of sleep">
+                    <span class="note-icon">🛌</span>
+                    <span class="note-text">Ensure you get at least 8 hours of sleep;</span>
+                </label>
+
+
+                <label class="note-item">
+                    <input type="checkbox" class="notes" value="Maintain consistent meal timings">
+                    <span class="note-icon">🕒</span>
+                    <span class="note-text">Consistency is key to achieving your fitness goals.</span>
+                </label>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <!-- Generate button -->
-    <button onclick="generateChart()">Generate Diet Chart</button>
 
-    <!-- External JS -->
-    <script src="script.js"></script>
+        <!-- Generate button -->
+        <button onclick="generateChart()">Generate Diet Chart</button>
+
+        <!-- External JS -->
+        <script src="script.js"></script>
 </body>
 
 </html>

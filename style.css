@@ -50,3 +50,89 @@ button:hover {
   background: #17a44b;
 }
 
+/* Notes Section Styling */
+.notes-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.05);
+  padding: 18px;
+  border-radius: 14px;
+  max-width: 720px;
+  margin: 20px auto;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+.notes-title {
+  text-align: center;
+  margin: 0 0 16px;
+  font-size: 20px;
+  letter-spacing: 0.6px;
+  color: #e6f7ea;
+  font-weight: 700;
+}
+
+.notes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Each note option */
+.note-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.02);
+  cursor: pointer;
+  transition: 0.3s;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.note-item:hover {
+  background: rgba(29,185,84,0.08);
+}
+
+/* Checkbox hidden but functional */
+.note-item input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #1db954;
+  border-radius: 4px;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.note-item input[type="checkbox"]:checked {
+  background-color: #1db954;
+}
+
+.note-item input[type="checkbox"]:checked::after {
+  content: "✔";
+  color: #fff;
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  font-size: 14px;
+}
+
+/* Icon circle */
+.note-icon {
+  display: inline-grid;
+  place-items: center;
+  min-width: 32px;
+  min-height: 32px;
+  border-radius: 50%;
+  background: rgba(29,185,84,0.12);
+  color: #1db954;
+  font-size: 18px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+/* Text */
+.note-text {
+  color: #dfeee0;
+  font-size: 15px;
+}
