@@ -11,6 +11,51 @@
 <body>
     <h1>Diet Chart Planner</h1>
 
+    <section class="notes-card" aria-labelledby="notes-heading">
+        <h2 id="notes-heading" class="notes-title">Notes</h2>
+        <div class="notes-list">
+
+
+            <label class="note-item">
+                <input type="checkbox" class="notes" value="water">
+
+                <span class="note-text">Name
+                    <input type="text" placeholder="Input the name" class="water-qty">
+                </span>
+            </label>
+            <label class="note-item">
+                <input type="checkbox" class="notes" value="water">
+
+                <span class="note-text">BMR =
+                    <input type="number" min="0" step="0.25" placeholder="input" class="water-qty" style="width:100px;">
+                    cal/day
+                </span>
+            </label>
+            <label class="note-item">
+                <input type="checkbox" class="notes" value="water">
+
+                <span class="note-text">Protein
+                    <input type="number" min="0" step="0.25" placeholder="input" class="water-qty" style="width:50px;">
+                </span>gm
+            </label>
+            <label class="note-item">
+                <input type="checkbox" class="notes" value="water">
+
+                <span class="note-text">Carbs
+                    <input type="number" min="0" step="0.25" placeholder="input" class="water-qty" style="width:50px;">
+                </span>gm
+            </label>
+            <label class="note-item">
+                <input type="checkbox" class="notes" value="water">
+
+                <span class="note-text">Fat
+                    <input type="number" min="0" step="0.25" placeholder="input" class="water-qty" style="width:50px;">
+                </span>gm
+            </label>
+        </div>
+    </section>
+
+
     <div id="planner">
         <!-- Morning Section -->
         <div class="section">
@@ -107,21 +152,21 @@
 
                 <!-- Other fixed notes -->
                 <label class="note-item">
-                    <input type="checkbox" class="notes" value="Include salad or greens with meals">
+                    <input type="checkbox" class="notes" value="Never skip meal more than 4 hours">
                     <span class="note-icon">🥗</span>
                     <span class="note-text">Never skip meal more than 4 hours;</span>
                 </label>
 
 
                 <label class="note-item">
-                    <input type="checkbox" class="notes" value="Aim for 7–8 hours of sleep">
+                    <input type="checkbox" class="notes" value="Ensure you get at least 8 hours of sleep">
                     <span class="note-icon">🛌</span>
                     <span class="note-text">Ensure you get at least 8 hours of sleep;</span>
                 </label>
 
 
                 <label class="note-item">
-                    <input type="checkbox" class="notes" value="Maintain consistent meal timings">
+                    <input type="checkbox" class="notes" value="Consistency is key to achieving your fitness goals">
                     <span class="note-icon">🕒</span>
                     <span class="note-text">Consistency is key to achieving your fitness goals.</span>
                 </label>

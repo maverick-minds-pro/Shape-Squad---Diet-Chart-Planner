@@ -18,13 +18,11 @@ function getSelectedItems(className) {
   });
 }
 
-
-
-
 // Function to generate the chart in a new tab
 function generateChart() {
   // Collect selections
   const selections = {
+    "About Client": getSelectedItems("abt-client"),
     "Morning : Pre-WorkOut": getSelectedItems("morning-pre"),
     "Morning : Post-WorkOut": getSelectedItems("morning-post"),
     "Morning : Breakfast": getSelectedItems("morning-break"),
@@ -44,8 +42,8 @@ function generateChart() {
         <title>Final Diet Chart</title>
         <style>
           body {
-            background: #121212;
-            color: #fff;
+            background: #FFFFFF; /* White background for print */
+            color: #333; /* Dark text for print */
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             padding: 30px;
           }
@@ -57,25 +55,27 @@ function generateChart() {
             font-size: 36px;
             font-weight: bold;
             margin: 0;
+            color: #000; /* Black for header title */
           }
           .header h3 {
             font-size: 20px;
             font-weight: normal;
             margin: 5px 0 20px;
-            color: #ccc;
+            color: #555; /* Darker grey for address */
           }
           .header h2 {
             font-size: 28px;
             font-weight: bold;
             margin-top: 30px;
-            text-decoration: underline;
+            text-decoration: none;
+            color: #333; /* Dark grey for DIET CHART heading */
           }
           h2 {
             text-align: center;
             margin-top: 35px;
             font-size: 24px;
             font-weight: bold;
-            color: #1db954;
+            color: #b0e3e2; /* Light blue-green for section titles */
           }
           .items {
             display: flex;
@@ -86,17 +86,18 @@ function generateChart() {
             font-size: 18px;
           }
           .items span {
-            background: #1e1e1e;
+            background: #f0f8ff; /* Light background for items */
             padding: 8px 15px;
             border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Subtle shadow */
+            color: #333; /* Dark text for items */
           }
           button {
             display: block;
             margin: 50px auto 20px;
             padding: 12px 25px;
-            background: #1db954;
-            color: white;
+            background: #b0e3e2;
+            color: #333;
             border: none;
             border-radius: 8px;
             cursor: pointer;
@@ -105,7 +106,12 @@ function generateChart() {
             transition: 0.3s;
           }
           button:hover {
-            background: #17a44b;
+            background: #9ad1d0;
+          }
+          @media print {
+            button {
+              display: none; /* Hide the button when printing */
+            }
           }
         </style>
       </head>
@@ -119,8 +125,8 @@ function generateChart() {
 
         <!-- Sections -->
         ${Object.keys(selections)
-          .filter(section => selections[section].length > 0) // skip empty sections
-          .map(section => `
+      .filter(section => selections[section].length > 0) // skip empty sections
+      .map(section => `
             <h2>${section}</h2>
             <div class="items">
               ${selections[section].map(item => `<span>${item}</span>`).join("")}
